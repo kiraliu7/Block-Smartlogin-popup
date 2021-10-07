@@ -1,11 +1,3 @@
-// ==UserScript==
-// @name         remove login geeksforgeeks
-// @author       kiraliu7
-// @match        *://www.geeksforgeeks.org/*
-// @run-at           document-start
-// @grant            none
-// ==/UserScript==
-
 var intervalid=setInterval(removeLogin, 200);
 function removeLogin(){
     const elements = document.getElementsByClassName("login-modal-div");
