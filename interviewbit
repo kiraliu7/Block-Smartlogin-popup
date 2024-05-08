@@ -1,0 +1,22 @@
+// ==UserScript==
+// @name         Block Interviewbit Login popup
+// @namespace    http://tampermonkey.net/
+// @version      2024-05-08
+// @description  try to take over the world!
+// @author       You
+// @match        *://www.interviewbit.com/*
+// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+// @grant        none
+// ==/UserScript==
+(function() {
+    'use strict';
+    console.log("script start");
+    var task = setInterval(()=>{
+        const element = document.getElementsByClassName("login-popup login-popup--close");
+        if(element){
+            element[0].remove();
+            clearInterval(task);
+            console.log("popup removed - zl");
+        }
+    },500);
+})();
